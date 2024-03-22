@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+    height:100vh;
+    width:100%;
+    background-image:url("./jungle_fantasy_deer_102121_1366x768.jpg");
+    background-size: cover;
+}
+
+.fill{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.content {
+    border:1px solid rgb(255, 255, 255); 
+    height:450px;
+    width:300px;
+    margin-top:10vh;
+    border-radius:10%;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 3px white;
+    backdrop-filter: blur(10px);
+
+}
+
+#name{
+    margin-top: 60px;
+}
+.inputbox input{
+    border:none;
+    border-bottom: 2px solid rgb(243, 243, 243);
+    font-size: 20px;
+    margin:40px 0px 0px 20px;
+    background-color: transparent;
+}
+#reg{
+    margin-left: 8%;
+    font-size: 45px;
+    margin: 20px 0px 0px 30px ;
+    color: white;
+}
+
+#submit{
+    margin-top:60px;
+    margin-left: 37%;
+    border:none;
+    height: 43px;
+    width:80px;
+    border-radius: 10%;
+}
+
+#submit:hover{
+    color:white;
+    background-color: rgb(18, 209, 104);
+}
+
+::placeholder{
+    color:white;
+}
+
+.inputbox svg{
+    height: 20px;
+    width:20px;
+    color: rgb(255, 255, 255);
+}
