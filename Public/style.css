@@ -7,7 +7,7 @@ body{
     position: absolute;
     height:100vh;
     width:100%;
-    background-image:url("./jungle_fantasy_deer_102121_1366x768.jpg");
+    background-image:url("./pic.jpg");
     background-size: cover;
 }
 
@@ -49,11 +49,11 @@ body{
 
 #submit{
     margin-top:60px;
-    margin-left: 37%;
+    margin-left: 16%;
     border:none;
     height: 43px;
-    width:80px;
-    border-radius: 10%;
+    width:200px;
+    border-radius: 50%;
 }
 
 #submit:hover{
