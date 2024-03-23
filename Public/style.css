@@ -72,7 +72,7 @@ body{
 }
 
 input[type=text]{
-    color: rgb(74, 3, 107);
+    color: rgb(241, 241, 241);
 }
 
 input:focus{
