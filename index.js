@@ -5,16 +5,13 @@ import { fileURLToPath } from "url";
 import nodemon from "nodemon";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import mongoose from "mongoose";
-import dotenv from dotenv;
-dotenv.config();
+
 const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD;
 
 mongoose.connect("mongodb://0.0.0.0/?directConnection=true",{
     useNewUrlParser:true,
