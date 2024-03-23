@@ -13,10 +13,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
-mongoose.connect("mongodb://0.0.0.0/?directConnection=true",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-});
+mongoose.connect("mongodb://0.0.0.0/?directConnection=true");
 
 var db = mongoose.connection;
 db.on("error", ()=> {console.log("error");});
