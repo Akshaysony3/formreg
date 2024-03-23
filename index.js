@@ -5,14 +5,22 @@ import { fileURLToPath } from "url";
 import nodemon from "nodemon";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import mongoose from "mongoose";
-
+const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:27017/regdata");
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+
+mongoose.connect(`mongodb+srv://&{username}:${password}@fromreg.lx16jws.mongodb.net/?retryWrites=true&w=majority&appName=fromreg`,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+});
+
 var db = mongoose.connection;
 db.on("error", ()=> {console.log("error");});
 db.once("open",()=>{console.log("Connection Established")});
