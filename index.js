@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 
-mongoose.connect(`mongodb+srv://${username}:${password}@fromreg.lx16jws.mongodb.net/`,{
+mongoose.connect("mongodb://0.0.0.0/?directConnection=true",{
     useNewUrlParser:true,
     useUnifiedTopology:true
 });
