@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import nodemon from "nodemon";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import mongoose from "mongoose";
-const dotenv = require("dotenv");
+import dotenv from dotenv;
 dotenv.config();
 const app = express();
 const port = 3000;
