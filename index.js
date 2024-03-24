@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import nodemon from "nodemon";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import mongoose from "mongoose";
-import dotenv from dotenv;
+import dotenv from "dotenv";
 dotenv.config();
 
 const name = process.env.USERNAME;
