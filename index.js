@@ -15,7 +15,7 @@ const pwd = process.env.Password;
 const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(bodyParser.json());
 
 mongoose.connect(`mongodb+srv://akshaysoni70043:Akshay_0307@regform.gaattxj.mongodb.net/?retryWrites=true&w=majority&appName=regform`);
