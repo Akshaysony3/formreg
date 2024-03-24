@@ -5,6 +5,12 @@ import { fileURLToPath } from "url";
 import nodemon from "nodemon";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import mongoose from "mongoose";
+import dotenv from dotenv;
+dotenv.config();
+
+const name = process.env.USERNAME;
+const pwd = process.env.Password;
+
 
 const app = express();
 const port = 3000;
@@ -12,8 +18,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-console.log(__dirname);
-mongoose.connect("mongodb://0.0.0.0/?directConnection=true");
+mongoose.connect(`mongodb+srv://${name}:${pwd}@fromreg.lx16jws.mongodb.net/?retryWrites=true&w=majority&appName=fromreg`);
 
 var db = mongoose.connection;
 db.on("error", ()=> {console.log("error");});
