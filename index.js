@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-
+console.log(__dirname);
 mongoose.connect("mongodb://0.0.0.0/?directConnection=true");
 
 var db = mongoose.connection;
@@ -27,7 +27,7 @@ const usersSchema = new mongoose.Schema({
 const Registration= mongoose.model("RegData",usersSchema);
 
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/pages/index.html");
 });
 
 
@@ -54,11 +54,11 @@ app.post("/login",async(req,res)=>{
 
 
 app.get("/success",(req,res)=>{
-    res.sendFile(__dirname+"/public/success.html");
+    res.sendFile(__dirname+"/pages/success.html");
 });
 
 app.get("/error",(req,res)=>{
-    res.sendFile(__dirname+"/public/error.html");
+    res.sendFile(__dirname+"/pages/error.html");
 });
 
 app.listen(port, () => {
