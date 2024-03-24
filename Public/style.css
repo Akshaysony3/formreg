@@ -9,6 +9,7 @@ body{
     width:100%;
     background-image:url("./pic.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .fill{
