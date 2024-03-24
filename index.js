@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-mongoose.connect(`mongodb+srv://${name}:${pwd}@fromreg.lx16jws.mongodb.net/?retryWrites=true&w=majority&appName=fromreg`);
+mongoose.connect(`mongodb+srv://akshaysoni70043:Akshay_0307@regform.gaattxj.mongodb.net/?retryWrites=true&w=majority&appName=regform`);
 
 var db = mongoose.connection;
 db.on("error", ()=> {console.log("error");});
